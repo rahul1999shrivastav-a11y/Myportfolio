@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rahul Shrivastav | Finance & Accounts, Receivables, KYC & AML</title>
+<meta name="description" content="Portfolio of Rahul Shrivastav: accounts receivable, reconciliation, and KYC/AML compliance in Gurugram.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E6EEE8; --paper:#F6F9F3; --ink:#12203A; --muted:#44574F; --rule:#B3C4B9;
+  --accent:#2036A6; --on-accent:#F6F9F3; --stamp:#B8322A; --ok:#1F6B45;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+  --hand:'Caveat','Segoe Print','Bradley Hand',cursive;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1620; --paper:#16222E; --ink:#E4ECE6; --muted:#9DB0A6; --rule:#2B3A46;
+    --accent:#9AABFF; --on-accent:#0E1620; --stamp:#FF8176; --ok:#7BD6A2;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1620; --paper:#16222E; --ink:#E4ECE6; --muted:#9DB0A6; --rule:#2B3A46;
+  --accent:#9AABFF; --on-accent:#0E1620; --stamp:#FF8176; --ok:#7BD6A2;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;letter-spacing:-0.02em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none;letter-spacing:-0.02em}
+nav ul{display:flex;gap:4px;flex-wrap:wrap}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;color:var(--ink);text-decoration:none;font-weight:500;font-size:.98rem;border-radius:8px}
+nav a:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.theme{min-height:44px;min-width:44px;display:inline-grid;place-items:center;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer;font:inherit;padding:0 14px}
+.theme:hover{background:color-mix(in srgb,var(--ink) 8%,transparent)}
+@media (max-width:760px){nav{display:none}}
+
+/* hero */
+.hero{padding:clamp(40px,7vw,96px) 0 clamp(48px,7vw,96px)}
+.hero-grid{display:grid;gap:clamp(32px,5vw,72px);align-items:center}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+.hero h1{font-size:clamp(3rem,8.4vw,6.6rem);font-weight:800;line-height:.95}
+.hero .claim{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,2rem);font-weight:600;line-height:1.2;margin-top:28px;max-width:20ch;letter-spacing:-0.015em}
+.hero .role{margin-top:20px;max-width:52ch;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.ghost:hover{background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+
+/* cheque widget */
+.stage{position:relative}
+.cheque{position:relative;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:22px 24px 18px;
+  background-image:repeating-linear-gradient(115deg,transparent 0 9px,color-mix(in srgb,var(--accent) 6%,transparent) 9px 10px);
+  box-shadow:0 1px 0 var(--rule),0 18px 40px -22px color-mix(in srgb,var(--ink) 55%,transparent);
+  animation:slidein .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes slidein{from{transform:translateX(60px) rotate(3deg);opacity:0}to{transform:none;opacity:1}}
+.chq-row{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.chq-meta{font-size:.9rem;color:var(--muted)}
+.chq-pay{display:flex;align-items:flex-end;gap:12px;margin-top:22px;border-bottom:1.5px solid var(--ink)}
+.chq-pay span.k{font-size:.9rem;color:var(--muted);padding-bottom:4px}
+.chq-pay .name{font-family:var(--hand);font-size:2rem;line-height:1.1;color:var(--accent)}
+.chq-amt{margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.chq-amt .box{border:1.5px solid var(--ink);padding:6px 16px;font-family:var(--display);font-weight:600;font-size:1.5rem;font-variant-numeric:tabular-nums;background:var(--bg)}
+.chq-amt .words{font-size:.9rem;color:var(--muted)}
+.micr{margin-top:18px;letter-spacing:.18em;font-size:.9rem;color:var(--muted);overflow:hidden;white-space:nowrap;font-variant-numeric:tabular-nums}
+.stamp{position:absolute;right:20px;top:46%;transform:rotate(-11deg) scale(1.3);opacity:0;pointer-events:none;
+  border:4px solid currentColor;border-radius:8px;padding:6px 18px;font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:.06em;
+  transition:opacity .25s,transform .25s;background:color-mix(in srgb,var(--paper) 70%,transparent)}
+.stamp.show{opacity:.92;transform:rotate(-11deg) scale(1)}
+.stamp.ok{color:var(--ok)}
+.stamp.bad{color:var(--stamp)}
+
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:26px;counter-reset:s}
+.track li{position:relative;padding-top:30px;font-size:.92rem;color:var(--muted);text-align:left}
+.track li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;border:2px solid var(--rule);background:var(--bg);z-index:1;transition:background .2s,border-color .2s}
+.track li::after{content:"";position:absolute;left:16px;right:0;top:13px;height:2px;background:var(--rule)}
+.track li:last-child::after{display:none}
+.track li b{display:block;color:var(--ink);font-weight:600}
+.track li.done::before{background:var(--accent);border-color:var(--accent)}
+.track li.done::after{background:var(--accent)}
+.track li.now::before{border-color:var(--accent);background:var(--paper);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent)}
+.track li.fail::before{background:var(--stamp);border-color:var(--stamp)}
+.track li.fin::before{background:var(--ok);border-color:var(--ok)}
+.panel{margin-top:18px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:16px 20px}
+.panel .state{font-family:var(--display);font-weight:600;font-size:1.15rem}
+.panel .what{margin-top:4px;color:var(--muted)}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.controls .btn{min-height:44px;padding:0 16px;font-size:.98rem}
+.caption{margin-top:12px;font-size:.88rem;color:var(--muted)}
+
+/* sections */
+section{padding:clamp(48px,7vw,88px) 0;border-top:1px solid var(--rule)}
+.sec-head{display:grid;gap:12px;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800;max-width:18ch}
+.sec-head p{color:var(--muted);max-width:56ch}
+
+/* ledger of numbers */
+.ledger li{display:grid;gap:6px 32px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.ledger li:first-child{border-top:2px solid var(--ink)}
+@media (min-width:760px){.ledger li{grid-template-columns:minmax(220px,.8fr) 1.4fr auto;align-items:baseline}}
+.ledger .fig{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.03em}
+.ledger .desc{max-width:46ch}
+.ledger .where{color:var(--muted);font-size:.95rem}
+
+/* experience */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--rule);background:transparent;color:var(--ink);font:inherit;font-weight:500;cursor:pointer}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.fstatus{color:var(--muted);font-size:.95rem;margin-bottom:28px;min-height:1.6em}
+.entry{display:grid;gap:10px 40px;padding:32px 0;border-top:1px solid var(--rule);transition:opacity .25s}
+@media (min-width:860px){.entry{grid-template-columns:230px 1fr}}
+.entry.dim{opacity:.28}
+.entry .when{font-family:var(--display);font-weight:600;font-variant-numeric:tabular-nums}
+.entry .when small{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:.92rem;margin-top:2px}
+.entry h3{font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:600}
+.entry .co{color:var(--muted);margin-top:4px}
+.entry ul{margin-top:18px;display:grid;gap:10px;max-width:68ch}
+.entry li{position:relative;padding-left:22px}
+.entry li::before{content:"";position:absolute;left:0;top:.78em;width:10px;height:2px;background:var(--accent)}
+.entry:last-child{border-bottom:1px solid var(--rule)}
+
+/* skills */
+.skills{display:grid;gap:36px}
+@media (min-width:860px){.skills{grid-template-columns:repeat(3,1fr);gap:44px}}
+.skills h3{font-size:1.35rem;font-weight:600;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.skills li{padding:9px 0;border-bottom:1px solid var(--rule)}
+
+/* credentials */
+.cred{display:grid;gap:48px}
+@media (min-width:860px){.cred{grid-template-columns:1.1fr .9fr;gap:64px}}
+.cred h3{font-size:1.35rem;font-weight:600;margin-bottom:16px}
+.cert{padding:16px 0;border-top:1px solid var(--rule)}
+.cert:last-child{border-bottom:1px solid var(--rule)}
+.cert b{display:block;font-weight:600}
+.cert span{color:var(--muted);font-size:.95rem}
+.edu{padding:16px 0;border-top:1px solid var(--rule)}
+.edu:last-of-type{border-bottom:1px solid var(--rule)}
+.edu b{display:block;font-weight:600}
+.edu span{color:var(--muted);font-size:.95rem}
+.edu p{margin-top:6px;font-size:.98rem}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-top:none}
+.contact .sec-head p{color:color-mix(in srgb,var(--bg) 72%,transparent)}
+.contact a{color:var(--bg)}
+.reach{display:grid;gap:0;margin-top:8px;max-width:760px}
+.reach li{display:grid;gap:4px 24px;padding:20px 0;border-top:1px solid color-mix(in srgb,var(--bg) 30%,transparent)}
+.reach li:last-child{border-bottom:1px solid color-mix(in srgb,var(--bg) 30%,transparent)}
+@media (min-width:640px){.reach li{grid-template-columns:120px 1fr auto;align-items:center}}
+.reach .k{color:color-mix(in srgb,var(--bg) 70%,transparent)}
+.reach .v{font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2.6vw,1.6rem);word-break:break-word}
+.contact .btn{border-color:var(--bg);color:var(--bg);background:transparent;min-height:44px;padding:0 16px}
+.contact .btn:hover{background:color-mix(in srgb,var(--bg) 16%,transparent)}
+.contact :focus-visible{outline-color:var(--bg)}
+footer{padding:28px 0 36px;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (max-width:520px){
+  .stamp{font-size:1.5rem;right:12px}
+  .track li{font-size:.82rem}
+  .chq-amt .words{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .cheque{animation:none}
+  *{transition:none !important}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Rahul Shrivastav</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#numbers">Numbers</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Rahul Shrivastav</h1>
+        <p class="claim">I follow every payment until it settles.</p>
+        <p class="role">Senior Executive, Finance &amp; Accounts at Housing.com in Gurugram. I handle accounts receivable, reconciliation, and KYC/AML compliance, and I am finishing a master's degree in psychology.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:rahul1999shrivastav@gmail.com">Email me</a>
+          <a class="btn ghost" href="#experience">See my experience</a>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="cheque" id="cheque">
+          <div class="chq-row">
+            <span class="chq-meta">Illustrative cheque</span>
+            <span class="chq-meta">Clearance takes 2 to 3 working days</span>
+          </div>
+          <div class="chq-pay"><span class="k">Pay</span><span class="name">Housing.com</span></div>
+          <div class="chq-amt"><div class="box">&#8377; 2,50,000</div><span class="words">Sample amount</span></div>
+          <div class="micr" aria-hidden="true">000000 &#9318; 000000000 &#9318; 00</div>
+          <div class="stamp" id="stamp" aria-hidden="true"></div>
+        </div>
+
+        <ol class="track" id="track" aria-label="Cheque stages">
+          <li data-i="0"><b>Received</b>Day 0</li>
+          <li data-i="1"><b>Deposited</b>Day 1</li>
+          <li data-i="2"><b>In clearing</b>Day 2</li>
+          <li data-i="3"><b>Settled</b>Day 3</li>
+        </ol>
+
+        <div class="panel">
+          <p class="state" id="state" aria-live="polite"></p>
+          <p class="what" id="what"></p>
+          <div class="controls">
+            <button class="btn primary" id="advance" type="button">Advance a day</button>
+            <button class="btn ghost" id="bounce" type="button">Bounce it</button>
+            <button class="btn ghost" id="reset" type="button">Start over</button>
+          </div>
+        </div>
+        <p class="caption">Try it. This is the cycle I track for about &#8377;6 crore of cheques every month.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="numbers">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>The figures behind the work</h2>
+        <p>Taken straight from my current and past roles.</p>
+      </div>
+      <ul class="ledger">
+        <li><span class="fig">&#8377;20 crore</span><span class="desc">Monthly collections I manage, up to about &#8377;1 crore a day, by working with sales teams on timely payment.</span><span class="where">Housing.com</span></li>
+        <li><span class="fig">&#8377;6 crore</span><span class="desc">Monthly cheque payments I track through the clearance cycle to final settlement.</span><span class="where">Housing.com</span></li>
+        <li><span class="fig">200+</span><span class="desc">Agents whose real-time adherence I monitored across multiple lines.</span><span class="where">Teleperformance</span></li>
+        <li><span class="fig">4+ years</span><span class="desc">Across collections, reconciliation, KYC/AML onboarding, and workforce operations.</span><span class="where">Gurugram</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Where I have worked</h2>
+        <p>Pick a theme to see which roles it ran through.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter roles by theme">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-f="ar" aria-pressed="false">Collections &amp; AR</button>
+        <button class="chip" type="button" data-f="recon" aria-pressed="false">Reconciliation</button>
+        <button class="chip" type="button" data-f="compliance" aria-pressed="false">Compliance</button>
+        <button class="chip" type="button" data-f="kpi" aria-pressed="false">KPI reporting</button>
+      </div>
+      <p class="fstatus" id="fstatus" aria-live="polite">Showing all 3 roles.</p>
+
+      <article class="entry" data-tags="ar recon compliance kpi">
+        <div class="when">Jul 2026 to now<small>Gurugram</small></div>
+        <div>
+          <h3>Senior Executive, Finance &amp; Accounts</h3>
+          <p class="co">Housing.com, Revenue Cycle Management (Accounts Receivable)</p>
+          <ul>
+            <li>Collect up to &#8377;20 crore a month, about &#8377;1 crore a day, working closely with sales teams so payments land on time.</li>
+            <li>Track about &#8377;6 crore of monthly cheque payments through the 2 to 3 working-day clearance cycle until final settlement.</li>
+            <li>Split collections across developer, broker, and owner accounts to work out revenue share.</li>
+            <li>Send daily sales action reports and payment reminders, and prepare month-end collection reports and bank reconciliation statements.</li>
+            <li>Check manual payment approvals for compliance, especially cheques, and watch for bounced cheques while keeping reconciliation records current.</li>
+            <li>Clear suspense accounts every day, analyse failed and rejected payments, and raise invoices through approvals.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="compliance">
+        <div class="when">Jun 2024 to Jun 2026<small>Gurugram</small></div>
+        <div>
+          <h3>Customer Support Executive (Level 1)</h3>
+          <p class="co">PolicyBazaar, Client Onboarding &amp; KYC Verification</p>
+          <ul>
+            <li>Ran KYC from start to finish: identity checks on Aadhaar, PAN, and passports, plus Source of Wealth checks for NRI accounts.</li>
+            <li>Supported Enhanced Due Diligence for high-net-worth and NRI clients under IRDAI and AML guidelines.</li>
+            <li>Protected sensitive customer information to IRDAI standards while resolving Level 1 queries.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry" data-tags="kpi">
+        <div class="when">Jul 2022 to May 2024<small>Gurugram</small></div>
+        <div>
+          <h3>Real Time Analyst</h3>
+          <p class="co">Teleperformance</p>
+          <ul>
+            <li>Monitored real-time adherence for 200+ agents across multiple lines against operational and service-level targets.</li>
+            <li>Published hourly and end-of-day KPI reports on shrinkage, AHT, and abandonment rate, and tracked planned against actual logged-in hours.</li>
+            <li>Served as the main contact for operational leadership, flagging volume anomalies and technical outages.</li>
+            <li>Managed break and schedule adherence to staffing models and client requirements.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What I work with</h2>
+      </div>
+      <div class="skills">
+        <div>
+          <h3>Finance and accounts</h3>
+          <ul>
+            <li>Revenue cycle management</li>
+            <li>Accounts receivable and collections follow-up</li>
+            <li>Order to cash</li>
+            <li>Cheque clearance tracking</li>
+            <li>Bank reconciliation</li>
+            <li>Suspense account clearance</li>
+            <li>Revenue share reconciliation</li>
+            <li>Invoicing and sales MIS</li>
+            <li>Financial reporting and record to report</li>
+            <li>SAP FICO (fundamentals)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Compliance and KYC</h3>
+          <ul>
+            <li>KYC and e-KYC</li>
+            <li>CDD and EDD</li>
+            <li>AML/CFT</li>
+            <li>IRDAI guidelines</li>
+            <li>Source of Wealth verification</li>
+            <li>Payment approval compliance checks</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools and analytics</h3>
+          <ul>
+            <li>Advanced Excel: VLOOKUP, pivot tables, data cleaning</li>
+            <li>KPI reporting and real-time monitoring</li>
+            <li>CRM and workforce management</li>
+            <li>Lean Six Sigma</li>
+            <li>Claude and Gemini for analysis and documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap cred">
+      <div>
+        <h3>Certifications</h3>
+        <div class="cert"><b>SAP FICO (Finance &amp; Controlling) Simplified for Beginners</b><span>Udemy, Oct 2026</span></div>
+        <div class="cert"><b>Outlining Processes in Record to Report (Beginner)</b><span>SAP Learning, Aug 2026</span></div>
+        <div class="cert"><b>NISM-IFSCA-01: Anti Money Laundering and Counter Terrorist Financing in the IFSC</b><span>NISM, Apr 2026, valid till Apr 2028</span></div>
+        <div class="cert"><b>Lean Six Sigma (Level 2, Leaders)</b><span>Completed during my Teleperformance tenure</span></div>
+      </div>
+      <div>
+        <h3>Education</h3>
+        <div class="edu"><b>M.A. Psychology (Regular)</b><span>Gurugram University, 2nd year, expected May 2027</span><p>Focus on workplace stress management and employee wellness.</p></div>
+        <div class="edu"><b>B.B.A. (Management)</b><span>Gurugram University, 2019 to 2022, grade 9/10</span></div>
+        <div class="edu"><b>Senior Secondary (Class XII)</b><span>HBSE, Haryana Board, 2017 to 2019, 90%</span></div>
+        <div class="edu"><b>Secondary (Class X)</b><span>HBSE, Haryana Board, 2017, 82%</span></div>
+        <p class="caption">Languages: English and Hindi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Get in touch</h2>
+        <p>Based in Gurugram, India. Email is the quickest way to reach me.</p>
+      </div>
+      <ul class="reach">
+        <li><span class="k">Email</span><a class="v" href="mailto:rahul1999shrivastav@gmail.com" id="emailText">rahul1999shrivastav@gmail.com</a><button class="btn" type="button" id="copy">Copy email</button></li>
+        <li><span class="k">Phone</span><a class="v" href="tel:+919899586618">+91 98995 86618</a><span></span></li>
+        <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/rahulshrivastav27" rel="noopener" target="_blank">linkedin.com/in/rahulshrivastav27</a><span></span></li>
+      </ul>
+      <p class="sr" id="copystatus" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Rahul Shrivastav, Gurugram</span>
+    <span>Finance &amp; Accounts, Receivables, KYC &amp; AML</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* theme */
+  var root=document.documentElement, tbtn=document.getElementById('theme');
+  try{var saved=localStorage.getItem('theme'); if(saved){root.setAttribute('data-theme',saved);}}catch(e){}
+  function isDark(){
+    var t=root.getAttribute('data-theme');
+    if(t) return t==='dark';
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function labelTheme(){ tbtn.textContent = isDark() ? 'Light' : 'Dark'; tbtn.setAttribute('aria-label', isDark()?'Switch to light theme':'Switch to dark theme'); }
+  labelTheme();
+  tbtn.addEventListener('click',function(){
+    var next=isDark()?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    labelTheme();
+  });
+
+  /* cheque clearance demo */
+  var stages=[
+    {state:'Received on day 0',what:'I log the cheque, check the manual payment approval, and match it to the sales owner.'},
+    {state:'Deposited on day 1',what:'I confirm the deposit and send the sales team a payment reminder.'},
+    {state:'In clearing on day 2',what:'I watch the 2 to 3 working-day window and chase anything that stalls.'},
+    {state:'Settled on day 3',what:'I reconcile it against the bank statement and clear the suspense entry.'}
+  ];
+  var bounceNote='I flag it to sales, record the return, and keep the reconciliation records current.';
+  var st={i:0,bounced:false};
+  var items=document.querySelectorAll('#track li');
+  var stamp=document.getElementById('stamp');
+  var elState=document.getElementById('state'), elWhat=document.getElementById('what');
+  var bAdv=document.getElementById('advance'), bBounce=document.getElementById('bounce'), bReset=document.getElementById('reset');
+
+  function render(){
+    items.forEach(function(li,idx){
+      li.className='';
+      if(st.bounced){
+        if(idx<st.i) li.className='done';
+        else if(idx===st.i) li.className='fail';
+      } else if(st.i===3){
+        li.className = idx<3 ? 'done' : 'fin';
+      } else {
+        if(idx<st.i) li.className='done';
+        else if(idx===st.i) li.className='now';
+      }
+    });
+    if(st.bounced){
+      elState.textContent='Returned unpaid after '+stages[st.i].state.split(' on ')[0].toLowerCase();
+      elWhat.textContent=bounceNote;
+      stamp.textContent='Returned'; stamp.className='stamp bad show';
+    } else {
+      elState.textContent=stages[st.i].state;
+      elWhat.textContent=stages[st.i].what;
+      if(st.i===3){ stamp.textContent='Settled'; stamp.className='stamp ok show'; }
+      else { stamp.className='stamp'; }
+    }
+    var finished = st.bounced || st.i===3;
+    bAdv.disabled = finished;
+    bBounce.disabled = finished || st.i===0;
+  }
+  bAdv.addEventListener('click',function(){ if(!st.bounced && st.i<3){ st.i++; render(); }});
+  bBounce.addEventListener('click',function(){ if(!st.bounced && st.i>0 && st.i<3){ st.bounced=true; render(); }});
+  bReset.addEventListener('click',function(){ st={i:0,bounced:false}; render(); });
+  render();
+
+  /* experience filter */
+  var chips=document.querySelectorAll('.chip');
+  var entries=document.querySelectorAll('.entry');
+  var fstatus=document.getElementById('fstatus');
+  var names={ar:'collections and AR',recon:'reconciliation',compliance:'compliance',kpi:'KPI reporting'};
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var f=c.getAttribute('data-f');
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', x===c ? 'true':'false'); });
+      var n=0;
+      entries.forEach(function(e){
+        var tags=(e.getAttribute('data-tags')||'').split(' ');
+        var match = f==='all' || tags.indexOf(f)>-1;
+        e.classList.toggle('dim',!match);
+        if(match) n++;
+      });
+      fstatus.textContent = f==='all' ? 'Showing all '+entries.length+' roles.' : n+' of '+entries.length+' roles involve '+names[f]+'.';
+    });
+  });
+
+  /* copy email */
+  var copy=document.getElementById('copy'), cs=document.getElementById('copystatus');
+  copy.addEventListener('click',function(){
+    var addr='rahul1999shrivastav@gmail.com';
+    function ok(){ copy.textContent='Copied'; cs.textContent='Email address copied'; setTimeout(function(){copy.textContent='Copy email';},2000); }
+    function fail(){ cs.textContent='Copy is not available here. Select the address and copy it.'; copy.textContent='Select instead'; setTimeout(function(){copy.textContent='Copy email';},2500); }
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(addr).then(ok,fail); }
+      else { fail(); }
+    }catch(e){ fail(); }
+  });
+})();
+</script>
+</body>
+</html>
